@@ -12,18 +12,12 @@
   <img src="http://lorempixel.com/400/200" /> -->
   <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-  <script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
     const root = document.getElementById('root');
-    // const Hello = React.createElement('div', null, 'Hello Coder X');
-    // ReactDOM.render(Hello, root);
-    const Div = React.createElement(
-      'div',
-      {
-        'className': 'someClass'
-      },
-      'Dom create from React js'
-    );
-    const Img = React.createElement('img', {'src': 'http://lorempixel.com/400/200'});
+    const Div = <div className="someClass"> Dom create from React js</div>
+    const Img = <img src="http://lorempixel.com/400/200" />
     const App = React.createElement('div', null, Div, Img);
     ReactDOM.render(App, root);
   </script>
